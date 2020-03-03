@@ -13,6 +13,7 @@ def main():
     namePairs={'yuvaraj':'Mahathii'}
     nameDictionary=('Super','Machi')
     print(name)
+    name.
 
 if __name__=='__main__':
     main()
