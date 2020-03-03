@@ -8,7 +8,11 @@ March:03-2020 :
 
 
 def main():
-
+    name='yuvaraj'
+    names=['yuvaraj','raghunapu']
+    namePairs={'yuvaraj':'Mahathii'}
+    nameDictionary=('Super','Machi')
+    print(name)
 
 if __name__=='__main__':
     main()
