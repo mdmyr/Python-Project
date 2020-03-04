@@ -14,6 +14,16 @@ def main():
 
     print('The total can be %d : ' %(a))
 
+# if ,elif  and else.
 
+    disaster =False
+    volcano = False
+
+    if(disaster):
+        print('Something to worry about!!')
+    elif(volcano):
+        print('Rush to safety')
+    else:
+        print('Have some fun')
 if __name__ == '__main__':
     main()
