@@ -25,5 +25,22 @@ def main():
         print('Rush to safety')
     else:
         print('Have some fun')
+
+
+#list using for the validation
+
+    list=[]
+    if(list.__len__()==0):
+        print('list is empty')
+    else:
+        print('not empty')
+
+
+#set comparision
+    setC = {'b','ab','b,'}
+    print(type(setC))
+    setC.add('sUPER')
+    print(type(setC))
+    print(setC)
 if __name__ == '__main__':
     main()
