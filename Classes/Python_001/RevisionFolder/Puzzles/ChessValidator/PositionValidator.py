@@ -17,30 +17,45 @@ Logic:: No of Pawns
     other : 8
 
 '''
+from RevisionFolder.Puzzles.ChessValidator.MatrixTest import createChessMatrixKey
 
-def generateChessMatrix():
+
+def exits(find, inList):
+    status =True
+    if find in inList.keys():
+
+        pass
+    else:
+        status=False
+    return  status
+
+
+def generateChessMatrix(list):
     #returns the matrix of the chess board.
+    status=''
+    print("generates a matrix for the chess boxes")
+    chessPositions= (createChessMatrixKey())
 
-    #for 8 row
-    for i in 8:
-        print(i)
-
-
-
+    for key in list.keys():
+        print(key)
+        status= exits(key,chessPositions)
+        if status==False:
+            return False
+        else :return True
 
 def validatePositions(InputChessPositions):
     #This function will validate the positions.
     # 1. count the pawns both sides , 16 in total, 8 on the pawn
     # 2. positons, should be valid, has to be btw  (number, alpha)
-
-
-    pass
+    status=generateChessMatrix(InputChessPositions)
+    print('Chess Board Status ::',status)
 
 
 def ChessPoistionValidator(InputChessPositions):
 
      print("Check the input type")
      print(type(InputChessPositions))
+     print(InputChessPositions.keys())
 
      #check the input type
      if(isinstance(InputChessPositions, dict)): # isinstance of
@@ -50,4 +65,4 @@ def ChessPoistionValidator(InputChessPositions):
          print('Please provide a Validate input')
          return'Invalid input'
 if __name__ == '__main__':
-    ChessPoistionValidator('hi')
+    ChessPoistionValidator({'1A': '', '1B': '', '1B ': '', '1D': '', '1E': '', '1F': '', '1G': '', '1H': '', '2A': ''})
