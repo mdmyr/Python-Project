@@ -7,26 +7,25 @@
 def createChessMatrixKey():
     #for 8 row
     i =1
-    #chessBoxKey={}
+    chessBoxKey={}
     while (i <= 8):
-        # print(i)
-        #print('\n')
+       # print(i)
+        print('\n')
         j=1
         incr='A'
-        keys=''
-        while(j <= 8):
+
+        while(j < 8):
+            #print(i,j)
+            #print(chr(ord(incr)+1))
+            #print(i,chr(ord(incr)+1))
+            incr=chr(ord(incr)+1) # convert int to string
             matrixPosition= str(i)+incr
-            incr=chr(ord(incr)+1)
-            keys = keys.__add__(str(matrixPosition + ' '))
+            print(matrixPosition)
             j=j+1
         i=i+1
 
-        #print(keys.rstrip().lstrip())
 
-    #adding the values
-        chessBoxKey= {value : ' ' for value in keys.lstrip().rstrip().split(' ')}
-        print(chessBoxKey)
-       # return chessBoxKey
+
 
 if __name__ == '__main__':
     createChessMatrixKey()

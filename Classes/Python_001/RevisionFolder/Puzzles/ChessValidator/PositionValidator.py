@@ -17,14 +17,14 @@ Logic:: No of Pawns
     other : 8
 
 '''
-from RevisionFolder.Puzzles.ChessValidator.MatrixTest import createChessMatrixKey
-
 
 def generateChessMatrix():
     #returns the matrix of the chess board.
+
     #for 8 row
-    chessBoardKey =createChessMatrixKey()
-    print(chessBoardKey)
+    for i in 8:
+        print(i)
+
 
 
 
@@ -46,9 +46,8 @@ def ChessPoistionValidator(InputChessPositions):
      if(isinstance(InputChessPositions, dict)): # isinstance of
       print("Yes")
       validatePositions(InputChessPositions)
-      generateChessMatrix()
      else:
          print('Please provide a Validate input')
          return'Invalid input'
 if __name__ == '__main__':
-    ChessPoistionValidator({'yuvaraj':'The'})
+    ChessPoistionValidator('hi')
